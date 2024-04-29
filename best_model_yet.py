@@ -69,8 +69,8 @@ def unet_model(input_size=(128, 128, 1)):
     c9 = Conv2D(16, (3, 3), activation='relu', kernel_initializer='he_normal', padding='same')(c9)
     
     # Output Layer
-    # Note: Use 'sigmoid' for binary-class segmentation
-    outputs = Conv2D(1, (1, 1), activation='sigmoid')(c9)  # Assuming 9 classes: background, left lung, right lung, infection
+    # 'sigmoid' for binary-class segmentation
+    outputs = Conv2D(1, (1, 1), activation='sigmoid')(c9)
     model = Model(inputs=[inputs], outputs=[outputs])
     return model
 
@@ -198,7 +198,7 @@ def resize_or_pad_slice(img_2d, target_shape=(128, 128), is_mask=False):
     Returns:
         numpy.ndarray: The resized (and potentially padded) slice as a numpy array with a channel dimension.
     """
-    # Ensure img_2d is a 3D tensor with the single channel dimension
+    # img_2d is a 3D tensor with the single channel dimension
     if img_2d.ndim == 2:
         img_2d = np.expand_dims(img_2d, axis=-1)
 
@@ -211,8 +211,6 @@ def resize_or_pad_slice(img_2d, target_shape=(128, 128), is_mask=False):
         target_shape[1], 
         method=('nearest' if is_mask else 'bilinear')
     )
-    # The output is already a 3D tensor including the channel dimension,
-    # so no further channel dimension adjustment is needed.
     return resized_img.numpy()
 
 def load_and_preprocess2d(image_paths, mask_paths, target_shape=(128, 128)):
@@ -231,11 +229,8 @@ def load_and_preprocess2d(image_paths, mask_paths, target_shape=(128, 128)):
             img_2d_resized = resize_or_pad_slice(img_2d, target_shape)
             mask_2d_resized = resize_or_pad_slice(mask_2d, target_shape, is_mask=True)
 
-           # if img_2d.shape[0] >=512:
-              #  img_2d_resized = center_crop(img_2d, 512)
-              #  mask_2d_resized = center_crop(img_2d, 512)
-# Debug: Print shape of each slice after resizing/padding
-            print("Resized image slice shape:", img_2d_resized.shape, "Resized mask slice shape:", mask_2d_resized.shape) #[512,512] or [630,630]
+            # Debug: Print shape of each slice after resizing/padding
+            print("Resized image slice shape:", img_2d_resized.shape, "Resized mask slice shape:", mask_2d_resized.shape) #[128,128]
 
             images.append(img_2d_resized)
             masks.append(mask_2d_resized)
