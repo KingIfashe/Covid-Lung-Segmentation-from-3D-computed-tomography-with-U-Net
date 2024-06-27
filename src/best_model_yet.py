@@ -10,7 +10,7 @@ from tensorflow.keras import backend as K
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Input, Conv2D, MaxPooling2D, Dropout, Conv2DTranspose, concatenate
 from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.metrics import MeanIoU  # You might need to implement Dice coefficient yourself
+from tensorflow.keras.metrics import MeanIoU 
 from tensorflow.keras.utils import to_categorical
 import matplotlib.pyplot as plt
 from tensorflow.keras.losses import BinaryFocalCrossentropy
@@ -116,7 +116,6 @@ def resize_img_3d(img, target_shape, is_mask=False):
     padding = [(0, target_shape[i] - resized_img.shape[i]) for i in range(3)]
     
     # Correctly apply padding
-    # If you plan to add a channel dimension later, no additional padding is needed here for the channel
     padded_img = np.pad(resized_img, padding + [(0, 0)] * (4 - len(padding)), mode='constant', constant_values=0)
     
     return padded_img
@@ -287,7 +286,7 @@ class TFDataGenerator(tf.data.Dataset):
                     # Resize or pad the 2D slices
                     img_2d_resized, mask_2d_resized = resize_or_pad_slice(img_2d, cls.target_shape), resize_or_pad_slice(mask_2d, cls.target_shape, is_mask=True)
 
-                    # Normalize the image
+                    # Normalise the image
                     img_2d_resized = img_2d_resized / 255.0
 
                     # Ensure mask is in the correct format

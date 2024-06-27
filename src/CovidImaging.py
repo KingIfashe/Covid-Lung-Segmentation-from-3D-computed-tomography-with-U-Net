@@ -8,7 +8,7 @@ from tensorflow.keras import backend as K
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Input, Conv2D, MaxPooling2D, Dropout, Conv2DTranspose, concatenate
 from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.metrics import MeanIoU  # You might need to implement Dice coefficient yourself
+from tensorflow.keras.metrics import MeanIoU  
 from tensorflow.keras.utils import to_categorical
 import matplotlib.pyplot as plt
 
