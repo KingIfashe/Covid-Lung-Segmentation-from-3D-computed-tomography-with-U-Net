@@ -31,7 +31,7 @@ The repo contians a neural network model for accurately segmenting COVID-19 infe
 ## **Results** 
 ### Binary focal cross entropy
 
-![image6](assets/pic6.png)
+![image6](assets/pic7.png)
 
 - **Training and Validation Accuracy**: Both training and validation accuracies increase over time, with validation accuracy reaching a high level and maintaining stability, which is a good sign of the model's ability to generalise. 
 
