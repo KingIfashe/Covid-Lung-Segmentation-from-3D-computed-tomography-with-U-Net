@@ -28,5 +28,25 @@ The repo contians a neural network model for accurately segmenting COVID-19 infe
 
 ![image2](assets/pic5.png)
 
+## **Results** 
+### Binary focal cross entropy
+
+![image6](assets/pic6.png)
+
+- **Training and Validation Accuracy**: Both training and validation accuracies increase over time, with validation accuracy reaching a high level and maintaining stability, which is a good sign of the model's ability to generalise. 
+
+- The consistently high validation accuracy compared to the training accuracy suggests that the model is not overfitting.
+
+- **Training and Validation Loss**: The training loss starts from a very high value and decreases significantly, indicating that the model is learning from the training data. 
+
+- The validation loss also decreases and stabilises, suggesting that the model generalises well to unseen data. 
+
+- The sharp decrease in training loss from the first to the second epoch might indicate a significant improvement in model learning, possibly due to an initially high learning rate or substantial learning in the early stages.
+
+- The test results further validate the model's performance, showing high accuracy on the test set, demonstrating the model's effectiveness in segmenting the target objects accurately. 
+
+
+
+
 
 
