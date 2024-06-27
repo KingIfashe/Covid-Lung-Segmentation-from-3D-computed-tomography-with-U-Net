@@ -1,6 +1,6 @@
 ![image1](assets/pic1.png)
 
-The repo contians a neural network model for accurately segmenting COVID-19 infections from 3D lung CT scans based on [COVID-19 CT Lung and Infection Segmentation Dataset](https://zenodo.org/records/3757476#.X6MgWGj7RPa). Note: Techical background of the general and my custom U-Net model architecture is gven at the end of the readme file. 
+The repo contians a neural network model for accurately segmenting COVID-19 infections from 3D lung CT scans based on [COVID-19 CT Lung and Infection Segmentation Dataset](https://zenodo.org/records/3757476#.X6MgWGj7RPa). **Note: Techical background of the general and my custom U-Net model architecture is gven at the end of the readme file.**
 
 - Image Segmentation in medical imaging is the process of partitioning a digital image into multiple segments (sets of pixels) to simplify its representation, useful for segmenting infected areas in the lungs from CT scans for COVID-19 patients. 
 
