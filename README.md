@@ -1,4 +1,4 @@
-![image1](assets/pic1.png)
+![image1](assets/pic11.png)
 
 The repo contians a neural network model for accurately segmenting COVID-19 infections from 3D lung CT scans based on [COVID-19 CT Lung and Infection Segmentation Dataset](https://zenodo.org/records/3757476#.X6MgWGj7RPa). 
 
