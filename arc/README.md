@@ -1,7 +1,7 @@
 # Model architecture:
 ## **Introduction to U-Net Architecture**:  
 
-![image12](../../assets/pic12.png)
+![image12](../assets/pic12.png)
 
 ### General U-Net architecture**, 
 
@@ -23,7 +23,7 @@
 
 ### My custom U-Net architecture**
 
-![image14](../../assets/pic14.png)
+![image14](../assets/pic14.png)
 
 - I have tailored the U-Net model to specifically address the challenges presented by COVID-19 CT scan segmentation.
 
