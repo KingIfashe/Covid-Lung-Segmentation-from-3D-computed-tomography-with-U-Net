@@ -11,3 +11,5 @@ The repo contians a neural network model for accurately segmenting COVID-19 infe
 - Each scan came with a corresponding mask named Infection masks that specifically outlined the COVID-19 infections. 
 
 - These infections were labelled by three experienced radiologists
+
+![image2](assets/pic2.png)
