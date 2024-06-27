@@ -26,12 +26,12 @@ The repo contians a neural network model for accurately segmenting COVID-19 infe
 
 - Also, some scripting on Channel Dimension Adjustment because TensorFlow expects images to have a channel dimension, even if it's a grayscale image. 
 
-![image2](assets/pic5.png)
+![image5](assets/pic5.png)
 
 ## **Results** 
 ### Binary focal cross entropy
 
-![image6](assets/pic7.png)
+![image7](assets/pic7.png)
 
 - **Training and Validation Accuracy**: Both training and validation accuracies increase over time, with validation accuracy reaching a high level and maintaining stability, which is a good sign of the model's ability to generalise. 
 
@@ -44,6 +44,21 @@ The repo contians a neural network model for accurately segmenting COVID-19 infe
 - The sharp decrease in training loss from the first to the second epoch might indicate a significant improvement in model learning, possibly due to an initially high learning rate or substantial learning in the early stages.
 
 - The test results further validate the model's performance, showing high accuracy on the test set, demonstrating the model's effectiveness in segmenting the target objects accurately. 
+
+### Binary focal cross entropy + Dice Loss + Data augmentations
+
+![image8](assets/pic8.png)
+
+- Both training and validation accuracies increase over time, with validation accuracy reaching a high level and maintaining stability, which is a good sign of the model's ability to generalise. 
+
+- The consistently high validation accuracy compared to the training accuracy suggests that the model is not overfitting.
+
+- Dice Coefficient starts at a low value of 0.0049, indicating poor overlap between predicted and actual segmentations initially. 
+
+- However, it shows a steady increase, reaching 0.1354 by the 10th epoch, which demonstrates that the model's ability to predict accurate segmentations improves significantly with training.
+
+- Validation Dice Coefficient also starts low at 0.0011 but increases over time to 0.0146
+
 
 
 
