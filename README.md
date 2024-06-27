@@ -60,6 +60,15 @@ The repo contians a neural network model for accurately segmenting COVID-19 infe
 - Validation Dice Coefficient also starts low at 0.0011 but increases over time to 0.0146
 
 
+### Conclusions:
+- The U-Net model shows promise in segmenting COVID-19 infections from CT scans, as evidenced by the high accuracy.
+ 
+- However, the Dice coefficient's values indicate that there is significant room for improvement in accurately capturing the precise shapes and boundaries of the infections. 
+
+- By addressing the areas for improvement, the model's performance can be enhanced and its utility in supporting medical diagnostics and treatment planning.
+
+
+
 
 
 
