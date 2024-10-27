@@ -314,8 +314,7 @@ train_dataset = tf.data.Dataset.from_tensor_slices((train_images, train_masks)).
 val_dataset = tf.data.Dataset.from_tensor_slices((val_images, val_masks)).batch(batch_size)
 test_dataset = tf.data.Dataset.from_tensor_slices((test_images, test_masks)).batch(batch_size)
 
-p
-rint(f'Number of training batches: {len(train_dataset)}')
+print(f'Number of training batches: {len(train_dataset)}')
 print(f'Number of validation batches: {len(val_dataset)}')
 print(f'Number of test batches: {len(test_dataset)}')
 

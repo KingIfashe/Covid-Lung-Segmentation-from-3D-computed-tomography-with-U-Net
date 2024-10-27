@@ -1,4 +1,4 @@
-## code that gives some good predictions too 
+## model that gives some good predictions too 
 
 import tensorflow as tf
 import numpy as np
@@ -10,7 +10,7 @@ from tensorflow.keras import backend as K
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Input, Conv2D, MaxPooling2D, Dropout, Conv2DTranspose, concatenate
 from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.metrics import MeanIoU  # You might need to implement Dice coefficient yourself
+from tensorflow.keras.metrics import MeanIoU  # If eading this, you might need to implement Dice coefficient yourself
 from tensorflow.keras.utils import to_categorical
 import matplotlib.pyplot as plt
 
@@ -267,7 +267,7 @@ class TFDataGenerator(tf.data.Dataset):
                     # Resize or pad the 2D slices
                     img_2d_resized, mask_2d_resized = resize_or_pad_slice(img_2d, cls.target_shape), resize_or_pad_slice(mask_2d, cls.target_shape, is_mask=True)
 
-                    # Normalize the image
+                    # Normalise the image
                     img_2d_resized = img_2d_resized / 255.0
 
                     # Ensure mask is in the correct format
@@ -366,4 +366,3 @@ def plot_examples(images, true_masks, predicted_masks, num_examples=23):
 # Assuming predictions, test_images, and test_masks are ready
 print(test_images.numpy().shape, test_masks.numpy().shape)
 plot_examples(test_images.numpy(), test_masks.numpy(), predictions, num_examples=8)
-#plot_examples(test_images.numpy(), test_masks.numpy(), pred_msk, num_examples=23)

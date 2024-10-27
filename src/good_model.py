@@ -1,4 +1,4 @@
-## code that gives good predictions 
+## Model that gives good predictions 
 
 import tensorflow as tf
 import numpy as np
